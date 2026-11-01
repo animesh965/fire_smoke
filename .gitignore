@@ -1,0 +1,33 @@
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Detection output and camera data
+data/
+logs/
+*.log
+fire_smoke_test_results/*
+!fire_smoke_test_results/.gitkeep
+
+# Test media
+videos/
+*.mp4
+*.avi
+*.mkv
+
+# Training output
+runs/
+wandb/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

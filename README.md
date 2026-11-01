@@ -1,11 +1,15 @@
-Fire and Smoke Detection System 🔥
+Fire and Smoke Detection System 
+
 About the Project
 
 This project is about detecting fire and smoke using Python and a trained YOLO model. I built this project to explore how computer vision and deep learning can be used to identify fire and smoke from images.
 
 The backend is developed using FastAPI. The idea is to make it possible to upload an image and get the detection results through an API.
 
+
+
 Features
+
 Detects fire and smoke using a trained YOLO model.
 Uses FastAPI for the backend.
 Supports image uploads.
@@ -20,8 +24,11 @@ OpenCV
 NumPy
 Pillow
 Uvicorn
+
+
 Project Structure
-text
+
+
 fire-smoke-detection/
 │
 ├── fire_backend_api.py

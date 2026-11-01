@@ -10,10 +10,10 @@ class Settings(BaseSettings):
     host: str = "0.0.0.0"
     port: int = 8000
     api_key: str = ""
-    mongodb_uri: str = "mongodb://localhost:27017"
+    mongodb_uri: str = ""
     mongodb_database: str = "fire_smoke_industrial"
-    camera_mongodb_uri: str = "mongodb://localhost:27017"
-    camera_mongodb_database: str = "servilience_db"
+    camera_mongodb_uri: str = ""
+    camera_mongodb_database: str = ""
     model_path: str = "models/fire_smoke_r3_e6_final.pt"
     model_device: str = "0"
     model_confidence: float = 0.45

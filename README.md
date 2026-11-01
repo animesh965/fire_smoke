@@ -1,25 +1,18 @@
-Fire and Smoke Detection System
+Fire and Smoke Detection System 🔥
+About the Project
 
--> Project Overview
+This project is about detecting fire and smoke using Python and a trained YOLO model. I built this project to explore how computer vision and deep learning can be used to identify fire and smoke from images.
 
-The Fire and Smoke Detection System is a Python-based computer vision project designed to detect fire and smoke using a trained YOLO deep learning model.
+The backend is developed using FastAPI. The idea is to make it possible to upload an image and get the detection results through an API.
 
-The system provides a backend API built with FastAPI, allowing users to upload images and receive fire and smoke detection results.
-
-The main objective of this project is to support early fire and smoke identification through automated image analysis.
-
-
--> Features
-
-Fire detection using a trained YOLO model.
-Smoke detection using computer vision.
-FastAPI-based backend.
-Image upload support.
-Detection results with confidence scores.
-REST API with interactive Swagger documentation.
-Organized project structure.
-
--> Technologies Used
+Features
+Detects fire and smoke using a trained YOLO model.
+Uses FastAPI for the backend.
+Supports image uploads.
+Provides detection results with confidence scores.
+Includes Swagger UI for testing API endpoints.
+Keeps the project files organized for easier development.
+Technologies Used
 Python
 YOLO (Ultralytics)
 FastAPI
@@ -27,11 +20,8 @@ OpenCV
 NumPy
 Pillow
 Uvicorn
-
-
--> Project Structure
-
-
+Project Structure
+text
 fire-smoke-detection/
 │
 ├── fire_backend_api.py
@@ -53,12 +43,15 @@ fire-smoke-detection/
 ├── README.md
 └── LICENSE
 
--> Installation and Setup
+Installation and Setup
+
+Follow these steps to run the project on your computer.
+
 1. Clone the Repository
 bash
 git clone https://github.com/animesh965/fire_smoke.git
 
-2. Navigate to Project Directory
+2. Open the Project Folder
 bash
 cd fire_smoke
 
@@ -66,78 +59,76 @@ cd fire_smoke
 bash
 python -m venv venv
 
-4. Activate Virtual Environment
+4. Activate the Environment
 
-Windows:
+For Windows:
 
 powershell
 venv\Scripts\activate
 
 
-Linux / macOS:
+For Linux or macOS:
 
 bash
 source venv/bin/activate
 
-5. Install Dependencies
+5. Install the Required Libraries
 bash
 pip install -r requirements.txt
 
-=> Run the Application
+Running the Project
 
-Start the FastAPI server:
+To start the FastAPI server, run:
 
 bash
 uvicorn fire_backend_api:app --reload
 
 
-The application will run at:
+Once the server starts, open this link in your browser:
 
-text
 http://127.0.0.1:8000
 
 API Documentation
 
-Open the Swagger UI in your browser:
+FastAPI provides an interactive page where you can check and test the available API endpoints.
 
-text
 http://127.0.0.1:8000/docs
 
--> Model Information
+Model Details
 
-The project uses a trained YOLO model:
+I have included my trained YOLO model in the models folder.
 
-Model File: fire_smoke_r3_e6_final.pt
+Model name: fire_smoke_r3_e6_final.pt
 
-The model is intended for identifying fire and smoke in images.
+This model is intended to detect fire and smoke in images.
 
--> Project Status
-Project structure created.
-Backend API initialized.
-GitHub repository created and code uploaded.
-YOLO model integration.
-Image upload and prediction endpoint.
-Detection result generation.
-Complete system testing.
+Project Progress
+Created the project structure.
+Set up the FastAPI backend.
+Uploaded the project to GitHub.
+Connect the trained YOLO model to the API.
+Add an image upload and prediction endpoint.
+Generate and save detection results.
+Test the complete application.
+Future Improvements
 
+There are a few things I would like to add to this project in the future:
 
--> Future Improvements
-Real-time fire and smoke detection using video streams.
-Webcam integration.
-Detection alerts and notifications.
-Improved model accuracy.
-Web-based user interface.
+Real-time fire and smoke detection through video.
+Webcam support.
+Alerts when fire or smoke is detected.
+Improvements in detection accuracy.
+A simple web interface to make the project easier to use.
+Disclaimer
 
-! Disclaimer
+This project is developed for learning and educational purposes. It is not meant to replace professional fire detection systems or certified fire safety equipment.
 
-This project is intended for educational and research purposes. It should not be considered a replacement for certified fire alarm systems or professional fire safety equipment.
-
--> Author
+Author
 
 Animesh
 
-GitHub: https://github.com/animesh965
+GitHub: animesh965
 
--> License
+License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. Check the LICENSE file for more information.

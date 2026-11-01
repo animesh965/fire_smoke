@@ -12,6 +12,8 @@ class Settings(BaseSettings):
     api_key: str = ""
     mongodb_uri: str = "mongodb://localhost:27017"
     mongodb_database: str = "fire_smoke_industrial"
+    camera_mongodb_uri: str = "mongodb://localhost:27017"
+    camera_mongodb_database: str = "servilience_db"
     model_path: str = "models/fire_smoke_r3_e6_final.pt"
     model_device: str = "0"
     model_confidence: float = 0.45

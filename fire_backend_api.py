@@ -163,9 +163,9 @@ async def run(args):
 
     if args.camera_code or args.camera_id:
         # Separate from app.database.py's normal application database connection.
-        # Configure FIRE_CAMERA_MONGODB_URI if authentication is required.
-        uri = args.mongo_uri or getattr(cfg, "camera_mongodb_uri", "") or "mongodb://160.25.62.109:8127"
-        db_name = args.mongo_database or getattr(cfg, "camera_mongodb_database", "") or "servilience_db"
+        # Configure CAMERA_MONGODB_URI in .env; never commit a real server address.
+        uri = args.mongo_uri or cfg.camera_mongodb_uri
+        db_name = args.mongo_database or cfg.camera_mongodb_database
         store = CameraMongo(uri, db_name)
         await store.connect()
         camera = await store.get_camera(args.camera_code, args.camera_id)
@@ -327,9 +327,9 @@ def main():
     p = argparse.ArgumentParser(description="Test YOLO fire/smoke detection on video, webcam, or MongoDB camera.")
     p.add_argument("--model", default=cfg.model_path)
     p.add_argument("--source", default="videos/f_candle.mp4", help="Video path or webcam index")
-    p.add_argument("--camera-code", help="Camera code in servilience_db.cameras, e.g. HISAFE_01")
+    p.add_argument("--camera-code", help="Camera code in servilience_db.cameras, e.g. CAM_01")
     p.add_argument("--camera-id", help="Camera ObjectId in servilience_db.cameras")
-    p.add_argument("--mongo-uri", help="Surveillance MongoDB URI; defaults to mongodb://160.25.62.109:8127")
+    p.add_argument("--mongo-uri", help="Surveillance MongoDB URI; defaults to CAMERA_MONGODB_URI")
     p.add_argument("--mongo-database", default=None)
     p.add_argument("--conf", type=float, default=cfg.model_confidence)
     p.add_argument("--imgsz", type=int, default=768)

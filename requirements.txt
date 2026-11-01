@@ -1,0 +1,12 @@
+
+fastapi
+uvicorn[standard]
+ultralytics
+opencv-python
+numpy
+motor
+pymongo
+pydantic
+pydantic-settings
+python-dotenv
+python-multipart
